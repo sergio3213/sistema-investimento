@@ -1,0 +1,7 @@
+CREATE TABLE users(
+    id int NOT NULL AUTO_INCREMENT,
+    user VARCHAR(20) NOT NULL,
+    pass VARCHAR(20) NOT NULL,
+    PRIMARY KEY(id)
+);
+
