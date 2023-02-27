@@ -3,7 +3,7 @@ import mysql from "../../node_modules/mysql2/promise.js"
 export const connection = mysql.createPool({
 
     host: 'containers-us-west-163.railway.app',
-    port: 5571,
+    port: 5771,
     user: 'root',
     password: 'VuxTcMwVMLD3adp6Witr',
     database: 'railway',
