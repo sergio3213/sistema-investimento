@@ -2,11 +2,11 @@ import mysql from "../../node_modules/mysql2/promise.js"
 /* const mysql = require('mysql2/promise'); */
 export const connection = mysql.createPool({
 
-    host: 'database',
-    port: 33070,
+    host: 'containers-us-west-163.railway.app',
+    port: 5571,
     user: 'root',
-    password: 'sucesso',
-    database: 'trybecashdb',
+    password: 'VuxTcMwVMLD3adp6Witr',
+    database: 'railway',
     waitForConnections:true,
     connectionLimit:10,
     queueLimit:0
