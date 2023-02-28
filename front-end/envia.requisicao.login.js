@@ -1,22 +1,20 @@
 async function enviaRequisicaoLogin() {
   inputUsername = document.querySelector("#username").value;
   inputPassword = document.querySelector("#password").value;
-  res = await axios.get(
+  
+  try{res = await axios.get(
     "https://backend-express-production-0fa9.up.railway.app/login",{
     params: {
       user: inputUsername,
       password: inputPassword,
     }})
-
-  /* res = await axios({
-    method: "GET",
-    url: "https://backend-express-production-0fa9.up.railway.app/login",
-        
-    data: {
-      user: inputUsername,
-      password: inputPassword,
-    },
-  });
-   */
-  console.log(res.data.token);
+    localStorage.setItem("token",res.data.token)
+  }
+  catch(err){
+    if(err.response.data.message==="Incorrect login"){
+      alert('Login incorreto!')
+    }
+    console.log()  
+  }
+  
 }
