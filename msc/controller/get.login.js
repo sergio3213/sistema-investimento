@@ -9,6 +9,7 @@ const jwtConfig = {
 };
 
 export default async function login(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
   
   console.log("testandooo")
   const { user, password } = req.body;
