@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import {findUserByAndPassword} from "../model/CRUD.js";
+import {findAll, findUserByAndPassword} from "../model/CRUD.js";
 
 const secretToken = "mypass";
 
@@ -23,8 +23,12 @@ export default async function login(req, res, next) {
 
   console.log("testandooo")
   const { user, password } = req.body;
+
+  console.log(",,,,,,",await req.query.user)
   
-  if(await findUserByAndPassword(req.body.user,req.body.password)===undefined){
+  console.log(await findUserByAndPassword(req.query.user,req.query.password))
+  console.log(await findAll())
+  if(await findUserByAndPassword(req.query.user,req.query.password)===undefined){
     return res.status(401).json({message:"Incorrect login"})
   }  
   
