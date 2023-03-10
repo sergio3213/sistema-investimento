@@ -10,32 +10,22 @@ const jwtConfig = {
 
 export default async function login(req, res, next) {
   
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  res.header(
-    "Access-Control-Allow-Methods",
-    "GET, POST, PATCH, DELETE, OPTIONS"
-  );
   
-
-  console.log("testandooo")
+  
   const { user, password } = req.body;
 
-  console.log(",,,,,,",await req.query.user)
-  
-  console.log(await findUserByAndPassword(req.query.user,req.query.password))
-  console.log(await findAll())
+    
   if(await findUserByAndPassword(req.query.user,req.query.password)===undefined){
     return res.status(401).json({message:"Incorrect login"})
   }  
+  const dadosUser = await findUserByAndPassword(req.query.user,req.query.password)
   
 
   login = {
-    user,
-    password
+    tudo:dadosUser, 
+    codCliente:dadosUser.codCliente,
+    user:dadosUser.user,
+    saldo:dadosUser.saldo,
   }
   
   const token = jwt.sign( login , secretToken, jwtConfig);

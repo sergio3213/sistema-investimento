@@ -6,6 +6,12 @@ import routerPost from "./rotas/post.js"
 const app = express();
 
 app.use(bodyParser.json())
+app.use((_req,res,next)=>{
+    res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', '*');
+  next()
+})
 app.use(routerGet)
 app.use(routerPost)
+
 export default app

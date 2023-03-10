@@ -10,13 +10,16 @@ async function validaToken(req, res, next) {
 
     const { user, password } = decoded;
 
-    const findUser = await crud.findUserByAndPassword(user, password);
+    const findUser = await findUserByAndPassword(user, password);
 
     if (findUser === undefined) {
       return res.status(401).json({ message: "Invalid token" });
     }
 
-    return res.status(200).json({ message: "Valid token" });
+    else{
+      return res.status(200).json({ message: "Valid token" });
+    }
+    
   } catch (err) {
     console.log(err);
   }
