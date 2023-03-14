@@ -23,5 +23,4 @@ async function enviaRequisicaoLogin() {
    */
   localStorage.setItem("token", res.data.token);
   window.location.href = "paginaPrincipal.html";
-  console.log(res.data.token);
 }

@@ -11,10 +11,11 @@ import {connection} from '../../src/db/connections.js'
    }
 
    export async function findByCodCliente(codCliente){
-    const [result] = await connection.execute(`SELECT codCliente,usersacoes.codAtivo,acoes.valor FROM usersacoes
+    const [result] = await connection.execute(`SELECT codCliente,usersacoes.codAtivo,acoes.nome,acoes.valor,count(usersacoes.codAtivo) as quantidade FROM usersacoes
     INNER JOIN acoes
     ON usersacoes.codAtivo=acoes.codAtivo
-    WHERE codCliente=${codCliente}`)
+    WHERE codCliente=${codCliente}
+    GROUP BY codCliente,codAtivo`)
     return result
    }
 

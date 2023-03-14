@@ -12,24 +12,21 @@ export default async function login(req, res, next) {
   
   
   
-  const { user, password } = req.body;
+  const { user, password } = req.query;
 
-    
   if(await findUserByAndPassword(req.query.user,req.query.password)===undefined){
     return res.status(401).json({message:"Incorrect login"})
   }  
   const dadosUser = await findUserByAndPassword(req.query.user,req.query.password)
   
-
   login = {
-    tudo:dadosUser, 
     codCliente:dadosUser.codCliente,
     user:dadosUser.user,
+    password:dadosUser.pass,
     saldo:dadosUser.saldo,
   }
   
   const token = jwt.sign( login , secretToken, jwtConfig);
-  console.log("ta funfando")
   
   res.status(200).json({token});
   next();

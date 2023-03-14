@@ -1,10 +1,11 @@
 import jwt from "jsonwebtoken";
-import {findAll, findUserByAndPassword} from "../msc/model/CRUD.js";
+import { findAll, findUserByAndPassword } from "../msc/model/CRUD.js";
 
 const secretToken = "mypass";
 
 async function validaToken(req, res, next) {
   const token = await req.header("Authorization");
+
   try {
     const decoded = jwt.verify(token, secretToken);
 
@@ -15,14 +16,7 @@ async function validaToken(req, res, next) {
     if (findUser === undefined) {
       return res.status(401).json({ message: "Invalid token" });
     }
-
-    else{
-      return res.status(200).json({ message: "Valid token" });
-    }
-    
-  } catch (err) {
-    console.log(err);
-  }
+  } catch (err) {}
 
   next();
 }

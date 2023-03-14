@@ -7,6 +7,6 @@ const routerGet = express.Router();
 
 routerGet.get("/login", login);
 
-routerGet.get(`/ativos/:codCliente`, enviaInfosUser);
+routerGet.get(`/ativos/:codCliente`, validaToken, enviaInfosUser);
 
 export default routerGet

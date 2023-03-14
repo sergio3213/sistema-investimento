@@ -43,7 +43,8 @@ GROUP BY user,nome
 
 
 
-select codCliente,usersacoes.codAtivo,acoes.valor from usersacoes
+select codCliente,usersacoes.codAtivo,acoes.valor,acoes.nome, count(usersacoes.codAtivo) as quantidade from usersacoes
 INNER JOIN acoes
 ON usersacoes.codAtivo=acoes.codAtivo
 where codCliente=1
+GROUP BY codCliente,codAtivo
