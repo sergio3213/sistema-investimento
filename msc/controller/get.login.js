@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import {findAll, findUserByAndPassword} from "../model/CRUD.js";
+import {findAll, findUserByAndPassword} from "../model/CRUD.select.js";
 
 const secretToken = "mypass";
 

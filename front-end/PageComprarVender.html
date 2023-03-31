@@ -1,30 +1,40 @@
 <!DOCTYPE html>
 <head>
   <script src="axios.min.js"></script>
+  <script src="jwt-decode.js"></script>
     <title></title>
-    </head>
+  <link rel="stylesheet" type="text/css" href="PageComprarVender.css">
+</head>
 <body>
 
-    <div id="myActions" style="border:1px solid black;width:100vw;height:10vh;position:relative; display:flex; flex-direction:row; justify-content: center;">
-        <div id="actions" style="border:1px solid black;width:15%;text-align: center;">
-          <div>ações</div>
+  <div id="username">Usuário: </div>
+  <div id="quadroComprarVenderAcao">
+    <div id="myActions">
+        <div id="actions">
+          <div id="acoesTitle">ações</div>
         </div>
-        <div id="quantidade" style="border:1px solid black;width:15%;text-align: center;">
-          <div>quantidade</div>
+        <div id="quantidade">
+          <div id="quantidadeTitle">quantidade</div>
         </div>
-        <div id="valor" style="border:1px solid black;width:15%;text-align: center;">
-          <div>valor</div>
+        <div id="valor">
+          <div id="valorTitle">valor</div>
         </div>
     </div>
+  </div>
+    
     <div>
+    
         <div>
-            <span>Comprar</span><input type="text" placeholder="Informe o valor">
+            <span>Comprar</span><input id="textComprar" type="text" placeholder="Informe o valor">
         </div>
         <div>
-            <span>Vender</span><input type="text" placeholder="Informe o valor">
+            <span>Vender</span><input id="textVender" type="text" placeholder="Informe o valor">
         </div>
         <div><button>voltar</button><button onclick="comprarVender()">confirmar</button></div>
     </div>
+
+
+    
 </body>
 <script type="text/javascript" src="ComprarVender.js">
 

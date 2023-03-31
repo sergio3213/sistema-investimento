@@ -2,26 +2,65 @@
     <head>
         <script src="axios.min.js"></script>
         <script src="jwt-decode.js"></script>
-        <script type="text/javascript" src="buscaInfosUser.js"></script>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="paginaPrincipal.css">
+
     </head>
    <body style="margin:0px">
-     <h1>Pagina principal</h1>
-     <div id="myActions" style="border:1px solid black;width:100vw;height:10vh;position:relative; display:flex; flex-direction:row; justify-content: center;">
-      <div id="actions" style="border:1px solid black;width:15%;text-align: center;">
-        <div>ações</div>
+     <div id="username">Usuário: </div>
+     <div id="tudoAcoesEdisponiveis" style="">
+        <div id="divTitleMinhasAcoes">
+           <h3>Minhas ações:</h3>
+        </div>
+      
+      <div id="myActions">
+        <div id="actions" >
+          <div id="acaoTitle">Ação</div>
+        </div>
+        <div id="quantidade">
+          <div id="quantidadeTitle">Qtde</div>
+        </div>
+        <div id="valor">
+          <div id="valorTitle">Valor</div>
+        </div>
+        <div id="comprar" style="position:relative;left:5vh;border:0px solid black;width:10%;text-align: center;">
+          <div id="buttonComprarTitle">Comp</div>
+        </div>
+        <div id="vender" style="position:relative;left:5vh;border:0px solid black;width:10%;text-align: center;">
+          <div id="buttonVenderTitle">Vender</div>
+        </div>
       </div>
-      <div id="quantidade" style="border:1px solid black;width:15%;text-align: center;">
-        <div>quantidade</div>
+
+      <div id="disponiveisTitle">
+        <h3 id="h3TitleDisponiveis">Disponíveis para investir:</h3>
       </div>
-      <div id="valor" style="border:1px solid black;width:15%;text-align: center;">
-        <div>valor</div>
+
+      <div id="tudoDisponiveis">
+        <div id="actionsDisponiveis">
+          <div id="titleAcaoDisponiveis">ação</div>
+        </div>
+        <div id="quantidadeDisponiveis">
+          <div id="titleQuantidadeDisponiveis">Qtde</div>
+        </div>
+        <div id="valorDisponiveis">
+          <div id="titleValorDisponiveis">valor</div>
+        </div>
+        <div id="comprarDisponiveis" style="position:relative;left:5vh;border:0px solid black;width:10%;text-align: center;">
+          <div id="buttonComprarTitleDisponiveis">Comp</div>
+        </div>
+        <div id="venderDisponiveis" style="position:relative;left:5vh;border:0px solid black;width:10%;text-align: center;">
+          <div id="buttonVenderTitleDisponiveis">Vender</div>
+        </div>
       </div>
-      <div id="comprar" style="border:1px solid black;width:15%;text-align: center;">
-        <div>s</div>
-      </div>
-      <div id="vender" style="border:1px solid black;width:15%;text-align: center;">
-        <div>S  </div>
       </div>
     </div>
+
+    <script type="text/javascript" src="buscaInfosUser.js"></script>
+
+    <div id="divbuttonDeposRetir" onclick="sendDepositoRetirada()">Depósito/Retirada</div>
+     
    </body> 
 </html>

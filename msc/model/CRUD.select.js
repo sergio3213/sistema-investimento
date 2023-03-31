@@ -19,3 +19,9 @@ import {connection} from '../../src/db/connections.js'
     return result
    }
 
+   export async function findAllAcoes(){
+    const [result] = await connection.execute("SELECT * FROM acoes")
+     return result
+ }
+
+

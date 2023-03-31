@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import { findAll, findUserByAndPassword } from "../msc/model/CRUD.js";
+import { findAll, findUserByAndPassword } from "../msc/model/CRUD.select.js";
 
 const secretToken = "mypass";
 
