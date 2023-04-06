@@ -3,6 +3,9 @@
   <script src="axios.min.js"></script>
   <script src="jwt-decode.js"></script>
     <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="PageComprarVender.css">
 </head>
 <body>
@@ -11,27 +14,29 @@
   <div id="quadroComprarVenderAcao">
     <div id="myActions">
         <div id="actions">
-          <div id="acoesTitle">ações</div>
+          <div id="acoesTitle">Ações</div>
         </div>
         <div id="quantidade">
-          <div id="quantidadeTitle">quantidade</div>
+          <div id="quantidadeTitle">Qtde</div>
         </div>
         <div id="valor">
-          <div id="valorTitle">valor</div>
+          <div id="valorTitle">Valor</div>
         </div>
     </div>
-  </div>
+  
     
     <div>
     
         <div>
-            <span>Comprar</span><input id="textComprar" type="text" placeholder="Informe o valor">
+            <span id="spanComprarTitle">Comprar</span><input id="textComprar" type="text" placeholder="Informe o valor">
         </div>
         <div>
-            <span>Vender</span><input id="textVender" type="text" placeholder="Informe o valor">
+            <span id="spanVenderTitle">Vender</span><input id="textVender" type="text" placeholder="Informe o valor">
         </div>
-        <div><button>voltar</button><button onclick="comprarVender()">confirmar</button></div>
+        <div id="divButtons"><button id="buttonVoltar">voltar</button><button id="buttonConfirmar"onclick="comprarVender()">confirmar</button></div>
     </div>
+
+  </div>
 
 
     

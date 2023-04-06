@@ -10,12 +10,15 @@ JWTCodCliente = tokenDecoded.codCliente;
 JWTuser = tokenDecoded.user;
 JWTSaldoCliente = tokenDecoded.saldo;
 acao = document.createElement("div");
+acao.style = "position:relative;top:2vh;background-color:orange;font-family: Josefin Sans;font-size:2.5vh;border-radius:3vw;"
 acao.innerHTML = parameterNomeAcao;
 
 quantidade = document.createElement("div");
+quantidade.style = "position:relative;top:2vh;background-color:rgb(151, 151, 151);border-radius:4vw;font-family: Josefin Sans;font-size:2.5vh;"
 quantidade.innerHTML = parameterQuantidade;
 
 valor = document.createElement("div");
+valor.style = "position:relative;top:2vh;background-color:black;color:white;border-radius:4vw;font-family: Josefin Sans;font-size:2.5vh;"
 valor.innerHTML = parameterValor;
 
 document.querySelector("#actions").appendChild(acao);

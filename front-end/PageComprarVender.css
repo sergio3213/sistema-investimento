@@ -16,13 +16,13 @@ body {
   background-color: rgb(255, 255, 255);
 }
 
-#quadroComprarVenderAcao{
-    border:0px solid black;
-    background-color: rgb(187, 187, 187);
-    position: relative;
-    top:15vh;
+#quadroComprarVenderAcao {
+  border: 0px solid black;
+  background-color: rgb(187, 187, 187);
+  position: relative;
+  top: 23vh;
+  height: 40vh;
 }
-
 
 #myActions {
   border: 0px solid black;
@@ -32,43 +32,127 @@ body {
   top: 0;
   display: flex;
   flex-direction: row;
-  
 }
 
 #actions {
-  border: 1px solid black;
+  border: 0px solid black;
   width: 15%;
   height: 3vh;
   text-align: center;
+  position: relative;
+  left: 21.5vw;
+  top: 1vh;
 }
 
 #quantidade {
   border: 0px solid black;
   width: 15%;
   text-align: center;
+  position: relative;
+  left: 26.5vw;
+  top: 1vh;
 }
 
 #valor {
   border: 0px solid black;
   width: 15%;
   text-align: center;
+  position: relative;
+  left: 31.5vw;
+  top: 1vh;
 }
 
-
-#acoesTitle{
-    font-family: "Josefin Sans", sans-serif;
-    font-size:4vw;
-    background-color:rgb(105, 105, 105);
-    border-radius:3vw;
-    border:0px solid yellow;
+#acoesTitle {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 4vw;
+  color: white;
+  background-color: rgb(43, 42, 42);
+  border-radius: 3vw;
+  border: 0px solid yellow;
 }
 
-#quantidadeTitle{
-    font-family: "Josefin Sans", sans-serif;
-    font-size:4vw;
+#quantidadeTitle {
+  color: white;
+  background-color: rgb(43, 42, 42);
+  border-radius: 3vw;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 4vw;
 }
 
-#valorTitle{
-    font-family: "Josefin Sans", sans-serif;
-    font-size:4vw;
+#valorTitle {
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 4vw;
+  background-color: rgb(43, 42, 42);
+  border-radius: 3vw;
+}
+
+#spanComprarTitle {
+  position: relative;
+  top: 3vh;
+  left: 8vw;
+  background-color: rgb(82, 82, 255);
+  border-radius: 0.7vw;
+  color: white;
+  font-size: 5vw;
+  font-family: "Courier New", Courier, monospace;
+}
+
+#spanVenderTitle {
+  position: relative;
+  top: 6vh;
+  left: 8vw;
+  background-color: rgb(34, 202, 0);
+  border-radius: 0.7vw;
+  color: white;
+  font-size: 5vw;
+  font-family: "Courier New", Courier, monospace;
+}
+
+#textComprar {
+  position: relative;
+  border: 0px;
+  top: 2.9vh;
+  left: 7.9vw;
+  font-size: 4vw;
+  width: 50vw;
+  height: 3vh;
+}
+
+#textVender {
+  position: relative;
+  border: 0px;
+  top: 5.8vh;
+  left: 7.9vw;
+  font-size: 4vw;
+  width: 52.9vw;
+  height: 3vh;
+}
+
+#divButtons {
+  position:relative;
+  top:13vh;
+  border: 0px solid black;
+}
+
+#buttonVoltar{
+  position:relative;
+  left:25vw;
+  background-color: black;
+  font-size:4vw;
+  border-radius:1vw;
+  color:white;
+  width:20vw;
+  height:4vh;
+}
+
+#buttonConfirmar{
+  position:relative;
+  left:32vw;
+  background-color: black;
+  font-size:4vw;
+  border-radius:1vw;
+  color:white;
+  width:20vw;
+  height:4vh;
 }
