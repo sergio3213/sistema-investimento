@@ -10,7 +10,7 @@ const jwtConfig = {
 
 export default async function login(req, res, next) {
   
-  
+  console.log("teste")
   
   const { user, password } = req.query;
 
