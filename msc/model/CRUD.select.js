@@ -24,4 +24,8 @@ import {connection} from '../../src/db/connections.js'
      return result
  }
 
+ export async function findSaldoFromCodUser(codCliente){
+  const[result] = await connection.execute(`SELECT saldo FROM users WHERE codCliente = ${codCliente}`)
+  return result
+}
 

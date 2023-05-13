@@ -6,7 +6,7 @@ import {connection} from "./db/connections.js";
 import app from '../app.js'
 
 
-app.listen(process.env.PORT, async()=>{
+app.listen(3000,'0.0.0.0', async()=>{
     console.log(`Escutando na porta ${process.env.PORT}`);
      const [result] = await connection.execute("SELECT 1")
         if (result){

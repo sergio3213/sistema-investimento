@@ -2,26 +2,32 @@
     <head>
         <script src="axios.min.js"></script>
         <script type="text/javascript" src="envia.requisicao.login.js?3"></script>
-        
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
         <title>
             Login
         </title>
     </head>
     
-    <body>
-        <div style="border:0px solid black;width:100vw;height:100vh; display:flex; flex-direction:row; justify-content: center;">
+    <body style="margin:0px">
+        <div id="divTudo" >
             
-            <div style="border:0px solid yellow;position:relative; top:30vh;width:13.53%;height:13vh;">
-                <div style="border:0px solid black; text-align: center;"><h2>Login</h2></div>
-            
-                <input type="text" id="username" style="height:20%;width:100%" placeholder="Username">
-                <br/><br/>
+            <div id="divTitleInvestX"><h1 id="h1InvestX">InvestX</h1></div>
+            <div id="divLogin">
+                <div id="divTitleLogin" style=""><h2 id="h2Login">Login</h2></div>
+                <div id="divInputUsernameAndInputPassword">
+                    <img src="iconeusuario.png" id="imgIconeUsuario"><input type="text" id="username" placeholder="Username">
+                    <br/><br/>
 
-                <input type="text" id="password" style="height:20%;width:100%" placeholder="Senha">
-                <br/><br/>
-                <div style="position:relative; border:0px solid yellow;text-align: center;">
-                    <button type="button" onclick="enviaRequisicaoLogin()" style="height:20%;">Entrar</input>
+                    <img src="iconesenha.png" id="imgIconeSenha"><input type="password" id="password" placeholder="Senha">
+                    <br/><br/>
+                    <div id="divButton">
+                        <button id="button" type="button" onclick="enviaRequisicaoLogin()">Login</input>
+                    </div>
                 </div>
+                
             </div>
         </div>
 
