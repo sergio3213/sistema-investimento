@@ -8,7 +8,9 @@ import {
 export const middlewareComprar = async (req, res) => {
     const resSubtrairSaldo = await subtrairSaldo(
       req.body.data.codCliente,
-      req.body.data.valor
+      req.body.data.valor,
+      req.body.data.quantidade,
+      req.body.data.codAtivo
     );
     if (resSubtrairSaldo === "Saldo insuficiente") {
       return res.status(412).json({ message: "Você não tem saldo suficiente!" });

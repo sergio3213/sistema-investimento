@@ -45,6 +45,7 @@ async function comprarVender() {
             quantidade: parseFloat(
               document.querySelector("#textComprar").value
             ),
+            codAtivo: parameterCodAtivo,
             valor:
               parseFloat(document.querySelector("#textComprar").value) *
               parseFloat(parameterValor),
@@ -56,6 +57,7 @@ async function comprarVender() {
         }
       )
       .catch((error) => {
+        console.log(error)
         alert(error.response.data.message);
       });
 
@@ -88,3 +90,7 @@ async function comprarVender() {
     });
   }
 }
+function buttonVoltar(){
+  window.location.href="paginaPrincipal.html"
+}
+

@@ -1,0 +1,20 @@
+[0;1;32m●[0m firewalld.service - firewalld - dynamic firewall daemon
+     Loaded: loaded (/lib/systemd/system/firewalld.service; enabled; vendor preset: enabled)
+     Active: [0;1;32mactive (running)[0m since Fri 2023-04-14 11:05:05 -03; 1h 40min ago
+       Docs: man:firewalld(1)
+   Main PID: 815 (firewalld)
+      Tasks: 2 (limit: 9188)
+     Memory: 25.1M
+     CGroup: /system.slice/firewalld.service
+             └─815 /usr/bin/python3 /usr/sbin/firewalld --nofork --nopid
+
+abr 14 11:05:59 sergio-Lenovo-ideapad-320-15IKB firewalld[815]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mWARNING: COMMAND_FAILED: '/usr/sbin/iptables -w10 -t filter -F DOCKER-ISOLATION-STAGE-1' failed: iptables: No chain/target/match by that name.[0m
+abr 14 11:05:59 sergio-Lenovo-ideapad-320-15IKB firewalld[815]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mWARNING: COMMAND_FAILED: '/usr/sbin/iptables -w10 -t filter -X DOCKER-ISOLATION-STAGE-1' failed: iptables: No chain/target/match by that name.[0m
+abr 14 11:05:59 sergio-Lenovo-ideapad-320-15IKB firewalld[815]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mWARNING: COMMAND_FAILED: '/usr/sbin/iptables -w10 -t filter -F DOCKER-ISOLATION-STAGE-2' failed: iptables: No chain/target/match by that name.[0m
+abr 14 11:05:59 sergio-Lenovo-ideapad-320-15IKB firewalld[815]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mWARNING: COMMAND_FAILED: '/usr/sbin/iptables -w10 -t filter -X DOCKER-ISOLATION-STAGE-2' failed: iptables: No chain/target/match by that name.[0m
+abr 14 11:05:59 sergio-Lenovo-ideapad-320-15IKB firewalld[815]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mWARNING: COMMAND_FAILED: '/usr/sbin/iptables -w10 -t filter -F DOCKER-ISOLATION' failed: iptables: No chain/target/match by that name.[0m
+abr 14 11:05:59 sergio-Lenovo-ideapad-320-15IKB firewalld[815]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mWARNING: COMMAND_FAILED: '/usr/sbin/iptables -w10 -t filter -X DOCKER-ISOLATION' failed: iptables: No chain/target/match by that name.[0m
+abr 14 11:05:59 sergio-Lenovo-ideapad-320-15IKB firewalld[815]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mWARNING: COMMAND_FAILED: '/usr/sbin/iptables -w10 -D FORWARD -i br-5261cd42713e -o br-5261cd42713e -j DROP' failed: iptables: Bad rule (does a matching rule exist in that chain?).[0m
+abr 14 11:05:59 sergio-Lenovo-ideapad-320-15IKB firewalld[815]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mWARNING: COMMAND_FAILED: '/usr/sbin/iptables -w10 -D FORWARD -i docker0 -o docker0 -j DROP' failed: iptables: Bad rule (does a matching rule exist in that chain?).[0m
+abr 14 11:05:59 sergio-Lenovo-ideapad-320-15IKB firewalld[815]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mWARNING: COMMAND_FAILED: '/usr/sbin/iptables -w10 -D FORWARD -i br-b12a9d66c0fc -o br-b12a9d66c0fc -j DROP' failed: iptables: Bad rule (does a matching rule exist in that chain?).[0m
+abr 14 11:06:02 sergio-Lenovo-ideapad-320-15IKB firewalld[815]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mWARNING: COMMAND_FAILED: '/usr/sbin/iptables -w10 -D FORWARD -i docker0 -o docker0 -j DROP' failed: iptables: Bad rule (does a matching rule exist in that chain?).[0m
